@@ -1,0 +1,16 @@
+[CityList]
+Novosibirsk =1496747
+Abakan = 1512236
+Barnaul = 1510853
+Berdsk = 1510350
+Biysk = 1510018
+Gorno-Altaysk = 1506271
+Irkutsk = 2023469
+Kemerovo = 1503901
+Krasnoobsk = 1502091
+Krasnoyarsk = 1502026
+Moscow = 5601538
+Ob = 1496421
+Omsk = 1496153
+SaintPetersburg = 498817
+Tomsk =1489425
