@@ -66,20 +66,23 @@ class getWeather():
         w_data['wind'] = str(jdata_decoded['wind']['speed']) + " m/s"
         w_data['clouds'] = str(jdata_decoded['clouds']['all']) + "%"
         # TODO: rain and snow in one variable
-        w_data['rain'] = str(jdata_decoded['snow']['3h'])
+        try:
+            w_data['rain'] = str(jdata_decoded['snow']['3h'])
+        except:
+            try:
+                w_data['rain'] = str(jdata_decoded['rain']['3h'])
+            except:
+                w_data['rain'] = "1"
 
-        #w_img = jdata_decoded['img']
-        #w_iconname = w_img.split("/")[-1]
+        w_iconname = str(jdata_decoded['weather'][0]['icon'])+".png"
 
-        #w_iconname = str(json.loads(jdata_decoded['weather'])['icon'])
+        if not os.path.exists('./images/' + w_iconname):
+            w_icon = urllib2.urlopen("http://openweathermap.org/img/w/" + w_iconname).read()
+            output = open('./images/' + w_iconname, 'wb')
+            output.write(w_icon)
+            output.close()
 
-        #if not os.path.exists('./images/' + w_iconname):
-        #    w_icon = urllib2.urlopen(w_img).read()
-        #    output = open('./images/' + w_iconname, 'wb')
-        #    output.write(w_icon)
-        #    output.close()
-
-        #w_data['img'] = str(w_iconname)
+        w_data['img'] = str(w_iconname)
 
         return w_data
 

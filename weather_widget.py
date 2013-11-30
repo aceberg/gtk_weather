@@ -128,7 +128,7 @@ class WeatherApp:
         window.set_border_width(10)
 
         image = gtk.Image()
-        #image.set_from_file('images/' + weather_data['img'])
+        image.set_from_file('images/' + weather_data['img'])
 
         weather = 'Weather in ' + weather_data['name'] + '\n\nTemperature: ' + weather_data['temp'] \
                   + '\nPressure      : ' + weather_data['pressure'] + '\nHumidity      : ' + weather_data['humidity'] \
@@ -151,7 +151,7 @@ class WeatherApp:
         weather_data = app.get_weather(city)
 
         self.statusicon.set_tooltip(weather_data['name'] + ', ' + weather_data['temp'])
-        #self.statusicon.set_from_file('images/' + weather_data['img'])
+        self.statusicon.set_from_file('images/' + weather_data['img'])
 
         return 1
 
