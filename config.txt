@@ -1,0 +1,49 @@
+{
+   "coord" :
+      {
+         "lon" : 82.93,
+         "lat" : 55.04
+      },
+   "sys" :
+      {
+         "message" : 0.1884,
+         "country" : "RU",
+         "sunrise" : 1385778514,
+         "sunset" : 1385805935
+      },
+   "weather" :
+      [
+         {
+            "id" : 804,
+            "main" : "Clouds",
+            "description" : "overcast clouds",
+            "icon" : "04n"
+         }
+      ],
+   "base" : "cmc stations",
+   "main" :
+      {
+         "temp" : 274.43,
+         "humidity" : 88.04,
+         "pressure" : 991.0855,
+         "temp_min" : 273.71,
+         "temp_max" : 275.15
+      },
+   "wind" :
+      {
+         "speed" : 5.91,
+         "deg" : 233.5
+      },
+   "snow" :
+      {
+         "3h" : 0.85
+      },
+   "clouds" :
+      {
+         "all" : 88
+      },
+   "dt" : 1385819111,
+   "id" : 1496747,
+   "name" : "Novosibirsk",
+   "cod" : 200
+}
